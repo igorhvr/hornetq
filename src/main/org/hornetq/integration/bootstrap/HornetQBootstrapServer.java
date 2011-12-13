@@ -17,6 +17,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.PrintStream;
+import java.lang.management.ManagementFactory;
 import java.net.URL;
 import java.util.List;
 import java.util.ListIterator;
@@ -25,11 +26,16 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.CopyOnWriteArrayList;
 
+import com.sun.jdmk.comm.AuthInfo;
+import com.sun.jdmk.comm.HtmlAdaptorServer;
 import org.hornetq.core.logging.Logger;
 import org.jboss.kernel.plugins.bootstrap.basic.BasicBootstrap;
 import org.jboss.kernel.plugins.deployment.xml.BeanXMLDeployer;
 import org.jboss.kernel.spi.config.KernelConfig;
 import org.jboss.kernel.spi.deployment.KernelDeployment;
+
+import javax.management.MBeanServer;
+import javax.management.ObjectName;
 
 /**
  * This is the method in which the HornetQ server can be deployed externall outside of jBoss. Alternatively a user can embed
@@ -66,6 +72,8 @@ public class HornetQBootstrapServer extends BasicBootstrap
     */
    public static void main(final String[] args) throws Exception
    {
+      maybeStartHtmlJmxAdaptor();
+
       HornetQBootstrapServer.log.info("Starting HornetQ Server");
 
       final HornetQBootstrapServer bootstrap = new HornetQBootstrapServer(args);
@@ -75,7 +83,51 @@ public class HornetQBootstrapServer extends BasicBootstrap
       bootstrap.addShutdownHook();
    }
 
-   /**
+    private static void maybeStartHtmlJmxAdaptor() {
+        MBeanServer beanServer = ManagementFactory.getPlatformMBeanServer();
+
+        String htmlAdaptorAvailable = System.getProperty("hornetq.htmladaptor.available");
+
+        if ("TRUE".equalsIgnoreCase(htmlAdaptorAvailable)) {
+
+            try {
+
+                String strPort = System.getProperty("hornetq.htmladaptor.port");
+
+                int htmlAdaptorPort = Integer.parseInt(strPort);
+
+                String userName = System.getProperty("hornetq.htmladaptor.userName");
+                String password = System.getProperty("hornetq.htmladaptor.password");
+
+
+                final HtmlAdaptorServer adapter = new HtmlAdaptorServer();
+
+                ObjectName adapterName = new ObjectName("SimpleAgent:name=htmladapter,port=" + htmlAdaptorPort);
+
+                adapter.setPort(htmlAdaptorPort);
+
+                if (userName != null && password != null) {
+                    adapter.addUserAuthenticationInfo(new AuthInfo(userName, password));
+                }
+
+                beanServer.registerMBean(adapter, adapterName);
+                adapter.start();
+
+                Runtime.getRuntime().addShutdownHook(new Thread(){
+                public void run() {
+                    adapter.stop();
+                }
+            });
+            } catch (Exception e) {
+                log.error("Error starting up the HtmlAdaptorServer: " + e.getMessage(), e);
+                log.error("If you don't want this, remove the hornetq.htmladaptor.available property " +
+                        "or set it to false");
+                System.exit(-1);
+            }
+        }
+    }
+
+    /**
     * Add a simple shutdown hook to stop the server.
     */
    public void addShutdownHook()
