@@ -256,6 +256,7 @@
       <path location="${build.core.classes.dir}"/>
       <path refid="org.jboss.microcontainer.classpath"/>
       <path refid="org.jboss.classpath"/>
+      <path location="lib/opendmk.jar"/>
    </path>
 
    <path id="logging.compilation.classpath">
