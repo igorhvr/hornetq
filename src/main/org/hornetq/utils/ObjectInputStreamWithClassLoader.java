@@ -13,6 +13,8 @@
 
 package org.hornetq.utils;
 
+import org.hornetq.core.logging.Logger;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
@@ -26,12 +28,12 @@ import java.io.ObjectStreamClass;
  */
 public class ObjectInputStreamWithClassLoader extends ObjectInputStream
 {
-
    // Constants ------------------------------------------------------------------------------------
 
    // Attributes -----------------------------------------------------------------------------------
 
    // Static ---------------------------------------------------------------------------------------
+   private static Logger log = Logger.getLogger(ObjectInputStreamWithClassLoader.class);
 
    // Constructors ---------------------------------------------------------------------------------
 
@@ -50,6 +52,13 @@ public class ObjectInputStreamWithClassLoader extends ObjectInputStream
    protected Class resolveClass(final ObjectStreamClass desc) throws IOException, ClassNotFoundException
    {
       String name = desc.getName();
+
+      if (Thread.currentThread().getContextClassLoader() == null) {
+          log.warn("hornetq - ObjectInputStreamWithClassLoader: Thread.currentThread().getContextClassLoader() is null. Setting to default to prevent a crash.");
+          ClassLoader defaultClassLoader = this.getClass().getClassLoader();
+          Thread.currentThread().setContextClassLoader(defaultClassLoader );
+      }
+
       ClassLoader loader = Thread.currentThread().getContextClassLoader();
       try
       {
