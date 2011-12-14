@@ -1,0 +1,5 @@
+To build everything, use 
+./build.sh distro
+
+Make sure you have a recent JDK (>=1.6), ant and maven installed prior to attempting this.
+
