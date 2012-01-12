@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="">
+  <component id="wutka-dtdparser"
+             licenseType=""
+             version="1.2.1"
+             description=""
+             
+             > 
+              
+    <artifact id="dtdparser121.jar"/>
+
+
+    <export>
+      <include input="dtdparser121.jar"/>
+
+    </export>
+  </component>
+</project>

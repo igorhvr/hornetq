@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="">
+  <component id="net/java/dev/javacc"
+             licenseType=""
+             version="4.0"
+             description=""
+             
+             > 
+              
+    <artifact id="javacc.jar"/>
+
+
+    <export>
+      <include input="javacc.jar"/>
+
+    </export>
+  </component>
+</project>

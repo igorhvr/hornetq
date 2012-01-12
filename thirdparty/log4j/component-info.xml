@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="">
+  <component id="log4j"
+             licenseType=""
+             version="1.2.14"
+             description=""
+             
+             > 
+              
+    <artifact id="log4j.jar"/>
+
+
+    <export>
+      <include input="log4j.jar"/>
+
+    </export>
+  </component>
+</project>

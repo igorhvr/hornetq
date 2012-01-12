@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="">
+  <component id="org/jboss/metadata"
+             licenseType=""
+             version="1.0.0.CR16"
+             description=""
+             
+             > 
+              
+    <artifact id="jboss-metadata.jar"/>
+
+
+    <export>
+      <include input="jboss-metadata.jar"/>
+
+    </export>
+  </component>
+</project>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="">
+  <component id="org/springframework"
+             licenseType=""
+             version="3.0.3.RELEASE"
+             description=""
+             
+             > 
+              
+    <artifact id="spring-core.jar"/>
+    <artifact id="spring-asm.jar"/>
+    <artifact id="spring-beans.jar"/>
+    <artifact id="spring-context.jar"/>
+    <artifact id="spring-aop.jar"/>
+    <artifact id="spring-expression.jar"/>
+    <artifact id="spring-jms.jar"/>
+    <artifact id="spring-tx.jar"/>
+
+
+    <export>
+      <include input="spring-expression.jar"/>
+      <include input="spring-tx.jar"/>
+      <include input="spring-aop.jar"/>
+      <include input="spring-context.jar"/>
+      <include input="spring-core.jar"/>
+      <include input="spring-jms.jar"/>
+      <include input="spring-asm.jar"/>
+      <include input="spring-beans.jar"/>
+
+    </export>
+  </component>
+</project>

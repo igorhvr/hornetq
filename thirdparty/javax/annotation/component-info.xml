@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="">
+  <component id="javax/annotation"
+             licenseType=""
+             version="1.0"
+             description=""
+             
+             > 
+              
+    <artifact id="jsr250-api.jar"/>
+
+
+    <export>
+      <include input="jsr250-api.jar"/>
+
+    </export>
+  </component>
+</project>

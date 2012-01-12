@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="">
+  <component id="aopalliance"
+             licenseType=""
+             version="1.0"
+             description=""
+             
+             > 
+              
+    <artifact id="aopalliance.jar"/>
+
+
+    <export>
+      <include input="aopalliance.jar"/>
+
+    </export>
+  </component>
+</project>

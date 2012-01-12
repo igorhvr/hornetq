@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="">
+  <component id="org/jboss/ws/native"
+             licenseType=""
+             version="3.0.4.GA"
+             description=""
+             
+             > 
+              
+    <artifact id="jbossws-native-jaxrpc.jar"/>
+    <artifact id="jbossws-native-saaj.jar"/>
+
+
+    <export>
+      <include input="jbossws-native-saaj.jar"/>
+      <include input="jbossws-native-jaxrpc.jar"/>
+
+    </export>
+  </component>
+</project>

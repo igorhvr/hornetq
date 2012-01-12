@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="">
+  <component id="sun-jaxb"
+             licenseType=""
+             version="2.1.9"
+             description=""
+             
+             > 
+              
+    <artifact id="jaxb-api.jar"/>
+
+
+    <export>
+      <include input="jaxb-api.jar"/>
+
+    </export>
+  </component>
+</project>

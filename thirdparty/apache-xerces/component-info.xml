@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="">
+  <component id="apache-xerces"
+             licenseType=""
+             version="2.9.1"
+             description=""
+             
+             > 
+              
+    <artifact id="xml-apis.jar"/>
+    <artifact id="xercesImpl.jar"/>
+
+
+    <export>
+      <include input="xercesImpl.jar"/>
+      <include input="xml-apis.jar"/>
+
+    </export>
+  </component>
+</project>

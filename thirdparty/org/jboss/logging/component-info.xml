@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="">
+  <component id="org/jboss/logging"
+             licenseType=""
+             version="2.1.0.GA"
+             description=""
+             
+             > 
+              
+    <artifact id="jboss-logging-spi.jar"/>
+
+
+    <export>
+      <include input="jboss-logging-spi.jar"/>
+
+    </export>
+  </component>
+</project>

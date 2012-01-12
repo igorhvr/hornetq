@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="">
+  <component id="org/jboss/netty"
+             licenseType=""
+             version="3.2.3.Final"
+             description=""
+             
+             > 
+              
+    <artifact id="netty.jar"/>
+
+
+    <export>
+      <include input="netty.jar"/>
+
+    </export>
+  </component>
+</project>

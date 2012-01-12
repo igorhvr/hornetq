@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="">
+  <component id="org/jboss/security"
+             licenseType=""
+             version="2.0.3.SP1"
+             description=""
+             
+             > 
+              
+    <artifact id="jboss-security-spi.jar"/>
+    <artifact id="jbosssx.jar"/>
+
+
+    <export>
+      <include input="jboss-security-spi.jar"/>
+      <include input="jbosssx.jar"/>
+
+    </export>
+  </component>
+</project>

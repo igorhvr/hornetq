@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="">
+  <component id="org/jboss/microcontainer"
+             licenseType=""
+             version="2.0.6.GA"
+             description=""
+             
+             > 
+              
+    <artifact id="jboss-kernel.jar"/>
+    <artifact id="jboss-dependency.jar"/>
+
+
+    <export>
+      <include input="jboss-kernel.jar"/>
+      <include input="jboss-dependency.jar"/>
+
+    </export>
+  </component>
+</project>

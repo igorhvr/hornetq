@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="">
+  <component id="org/jboss/resteasy"
+             licenseType=""
+             version="2.1.0.GA"
+             description=""
+             
+             > 
+              
+    <artifact id="resteasy-jaxrs.jar"/>
+    <artifact id="jaxrs-api.jar"/>
+    <artifact id="resteasy-jaxb-provider.jar"/>
+
+
+    <export>
+      <include input="jaxrs-api.jar"/>
+      <include input="resteasy-jaxb-provider.jar"/>
+      <include input="resteasy-jaxrs.jar"/>
+
+    </export>
+  </component>
+</project>

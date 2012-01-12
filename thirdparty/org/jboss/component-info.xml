@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="">
+  <component id="org/jboss"
+             licenseType=""
+             version="2.2.14.GA"
+             description=""
+             
+             > 
+              
+    <artifact id="jboss-common-core.jar"/>
+    <artifact id="jbossxb.jar"/>
+    <artifact id="jboss-reflect.jar"/>
+    <artifact id="jboss-mdr.jar"/>
+
+
+    <export>
+      <include input="jboss-reflect.jar"/>
+      <include input="jbossxb.jar"/>
+      <include input="jboss-mdr.jar"/>
+      <include input="jboss-common-core.jar"/>
+
+    </export>
+  </component>
+</project>

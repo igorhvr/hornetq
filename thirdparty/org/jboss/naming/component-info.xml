@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="">
+  <component id="org/jboss/naming"
+             licenseType=""
+             version="5.0.3.GA"
+             description=""
+             
+             > 
+              
+    <artifact id="jnpserver.jar"/>
+
+
+    <export>
+      <include input="jnpserver.jar"/>
+
+    </export>
+  </component>
+</project>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="">
+  <component id="javax/xml/stream"
+             licenseType=""
+             version="1.0"
+             description=""
+             
+             > 
+              
+    <artifact id="stax-api.jar"/>
+
+
+    <export>
+      <include input="stax-api.jar"/>
+
+    </export>
+  </component>
+</project>

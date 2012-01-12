@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="">
+  <component id="org/jboss/ejb3"
+             licenseType=""
+             version="1.0.0"
+             description=""
+             
+             > 
+              
+    <artifact id="jboss-ejb3-ext-api.jar"/>
+
+
+    <export>
+      <include input="jboss-ejb3-ext-api.jar"/>
+
+    </export>
+  </component>
+</project>

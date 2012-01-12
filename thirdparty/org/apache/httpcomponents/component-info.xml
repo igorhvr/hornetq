@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="">
+  <component id="org/apache/httpcomponents"
+             licenseType=""
+             version="4.0.3"
+             description=""
+             
+             > 
+              
+    <artifact id="httpclient.jar"/>
+    <artifact id="httpcore.jar"/>
+
+
+    <export>
+      <include input="httpcore.jar"/>
+      <include input="httpclient.jar"/>
+
+    </export>
+  </component>
+</project>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="">
+  <component id="javassist"
+             licenseType=""
+             version="3.6.0.GA"
+             description=""
+             
+             > 
+              
+    <artifact id="javassist.jar"/>
+
+
+    <export>
+      <include input="javassist.jar"/>
+
+    </export>
+  </component>
+</project>

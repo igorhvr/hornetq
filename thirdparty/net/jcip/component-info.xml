@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="">
+  <component id="net/jcip"
+             licenseType=""
+             version="1.0"
+             description=""
+             
+             > 
+              
+    <artifact id="jcip-annotations.jar"/>
+
+
+    <export>
+      <include input="jcip-annotations.jar"/>
+
+    </export>
+  </component>
+</project>

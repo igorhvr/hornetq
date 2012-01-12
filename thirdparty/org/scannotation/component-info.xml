@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="">
+  <component id="org/scannotation"
+             licenseType=""
+             version="1.0.2"
+             description=""
+             
+             > 
+              
+    <artifact id="scannotation.jar"/>
+
+
+    <export>
+      <include input="scannotation.jar"/>
+
+    </export>
+  </component>
+</project>
